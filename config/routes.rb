@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # sudo service postgresql restart
+  # http://[::1]:3000/rails/info/routes
 
   get '/products', to: 'products#index'
-  # sudo service postgresql restart
+  get '/products/:id', to: 'products#show', as: :product
 end
